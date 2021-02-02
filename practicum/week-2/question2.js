@@ -11,15 +11,15 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
 
  var canGetEqualCookies = function(cookies, extraCookies) {
          for (var i = 0; i < cookies.length - 1; i++){
+                 if (extraCookies === 0){
+                         return false;
+                 }
                  if (extraCookies !== 0){
                          extraCookies -=1
                          if (cookies[i] !== cookies[i+1]){
                                  cookies[i] += 1
                          }
                          return true;
-                 }else{
-                         return false;
                  }
-                 
          }
  };
