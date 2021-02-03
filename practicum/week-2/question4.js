@@ -14,12 +14,12 @@ var howManyCommon = function(A, B) {
     let count = 0;
     let i = 0;
     let j = 0;
-    let A = A.split("")
-    let B = B.split("")
+    let str1 = A.split("")
+    let str2 = B.split("")
 
-    for (;i<A.length;i++){
-        for (j=0; j<B.length;j++){
-            if (A[i] == B[j]){
+    for (;i<str1.length;i++){
+        for (j=0; j<str2.length;j++){
+            if (str1[i] == str2[j]){
                 count +=1
             }
         }
