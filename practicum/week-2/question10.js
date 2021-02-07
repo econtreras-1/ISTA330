@@ -8,7 +8,12 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
-    var sorted = Array.from(n.toString()).map(Number);
-    return Math.max(sorted) - Math.min(sorted)
+    var max = n.reduce(function(a, b) {
+        return Math.max(a, b);
+    });
+    var min = n.reduce(function(a, b) {
+        return Math.min(a, b);
+    });
+    return max - min
 
 };
