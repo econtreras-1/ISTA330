@@ -9,14 +9,13 @@ output: [1, 0, 1, 2]
 
 var biggerAndEven = function(input) {
     var array = [];
-    var count = 0
+
     for(var i=0; i<input.length; i++){
-        array.push(count);
-        for (var j=0; j<input.length; j++){
-            if (input[i] < input[j] && input[j]%2==0){
-                count++
-            }
+        var count = 0;
+        if (input[i] < input[i+1] && input[i+1]%2==0){
+            count++;
         }
+        array.push(count);
     }
     return array
 };
