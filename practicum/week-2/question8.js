@@ -14,6 +14,9 @@ var biggerAndEven = function(input) {
     for(var i=0; i<input.length; i++){
         count = 0;
         for (var j=0; j<input.lenght; j++){
+            if(i ==j){
+                continue
+            }
             if (input[i]<input[j] && input[j]%2==0){
                 count++;
             }
