@@ -12,7 +12,14 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-    
-
+    if (n == 0){
+        return 0;
+    } else if (n % 3 == 0){
+        return 1 + minimalReduction(n/3);
+    } else if (n % 4 == 0){
+        return 1 + minimalReduction(n/4);
+    } else if (n - 1 == 0){
+        return 1 + minimalReduction(n-1)
+    }
 };
 
