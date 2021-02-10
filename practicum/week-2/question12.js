@@ -15,5 +15,30 @@ output: 4 because the following partition has the highest number of balanced sub
 */
 
 var maxBalanceNumber = function(input) {
-  
+  //Test for empty string
+  if (input.length == 0) {
+    return 0;
+  }
+
+  var a = 0;
+  var b = 0;
+  var count = 0;
+
+  //Iterate Through String
+  for (var i = 0; i < input.length; i++) {
+    //If letter "a" or "b" exist in string increment.
+    if (input[i] == 'a') {
+      a++;
+    }
+    else if (input[i] == 'b') {
+      b++;
+    }
+
+    //Increment Count When Letters Are Both Found
+    if (a == b) {
+      count++;
+    }
+  }
+
+  return count;
 };
