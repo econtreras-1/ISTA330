@@ -11,20 +11,14 @@ output: 4
 */
 
 var maxSumOfMins = function(input) {
-       //Pair Elements from List
-       var pairs = [];
 
-       for (var i =0; i < input.length; i += 2){
-              pairs.push(input.slice(i, i+2));
+       input.sort(function (a, b) { return a - b; });
+
+       var minSum = 0;
+
+       for (var i = 0; i < input.length - 1; i += 2) {
+              minSum += input[i];
        }
 
-       var mins = [];
-
-       for (var j = 0; j< pairs.length; j+1){
-              mins.push(Math.min.apply(Math,pairs))
-
-       }
-
-       return _.sum(mins);
-
-};
+       return minSum;
+};;
