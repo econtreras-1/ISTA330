@@ -15,12 +15,12 @@ var m_element = function(input) {
     for (var i = 0; i <= input.length/2; i++){
         var count = 1;
         for (var j = i + 1; j < n; j++) {
-            if (A[j] == A[i]) {
+            if (input[j] == input[i]) {
                 count++;
             }
         }
-        if (count > n/2) {
-            return A[i];
+        if (count > input.length/2) {
+            return input[i];
         }
     }
     return -1;
