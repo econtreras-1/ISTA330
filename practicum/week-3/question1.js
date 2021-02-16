@@ -13,7 +13,7 @@ var largestNumberIsAtLeastTwice = function(input) {
 
         var max = Math.max(input);
 
-        for (var i = 1; i < cookies.length; i++){
+        for (var i = 1; i < input.length; i++){
                 if (max*2 > i){
                         return true;
                 }
