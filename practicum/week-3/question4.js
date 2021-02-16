@@ -13,5 +13,19 @@ Example:
 */
 
 var hasDuplicates = function(input) {
+    let counts = {}
+
+    for(let i =0; i < a.length; i++){ 
+        if (counts[a[i]]){
+        counts[a[i]] += 1
+        } else {
+        counts[a[i]] = 1
+        }
+    }  
+    for (let prop in counts){
+        if (counts[prop] >= 2){
+            return true;
+        }
+    }
 
 };
