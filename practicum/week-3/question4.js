@@ -25,6 +25,8 @@ var hasDuplicates = function(input) {
     for (let prop in counts){
         if (counts[prop] >= 2){
             return true;
+        } else{
+            return false;
         }
     }
 
