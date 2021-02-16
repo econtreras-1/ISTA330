@@ -12,17 +12,22 @@ output: 2
 */
 
 var m_element = function(input) {
-    for (var i = 0; i <= input.length/2; i++){
-        var count = 1;
-        for (var j = i + 1; j < n; j++) {
-            if (input[j] == input[i]) {
-                count++;
-            }
+    let m = -1;
+    let i = 0;
+
+    for (let j = 0; j < input.length; j++)
+    {
+        if (i == 0)
+        {
+            m = input[j];
+            i = 1;
         }
-        if (count > input.length/2) {
-            return input[i];
+        else if (m == input[j]) {
+            i++;
+        }
+        else {
+            i--;
         }
     }
-    return -1;
-
+    return m;
 };
