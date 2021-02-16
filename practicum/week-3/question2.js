@@ -15,7 +15,7 @@ Example: input: [-12,3,-1,5,-2,1,-7]
  
         for (var i = 0; i < size; i++)
         {
-            max_ending_here = max_ending_here + a[i];
+            max_ending_here = max_ending_here + input[i];
             if (max_so_far < max_ending_here)
                 max_so_far = max_ending_here;
             if (max_ending_here < 0)
