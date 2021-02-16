@@ -15,11 +15,11 @@ Example:
 var hasDuplicates = function(input) {
     let counts = {}
 
-    for(let i =0; i < a.length; i++){ 
-        if (counts[a[i]]){
-        counts[a[i]] += 1
+    for(let i =0; i < input.length; i++){ 
+        if (counts[input[i]]){
+        counts[input[i]] += 1
         } else {
-        counts[a[i]] = 1
+        counts[input[i]] = 1
         }
     }  
     for (let prop in counts){
