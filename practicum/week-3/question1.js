@@ -12,15 +12,13 @@ is at least twice as much as every other number
 var largestNumberIsAtLeastTwice = function(input) {
 
         var max = Math.max(input);
-        input.pop();
 
-        for (var i = 0; i < input.length; i++){
-                if (max > input[i]*2){
+        for (var i = 0; i < input.length-1; i++){
+                if ((input[i]*2) < max){
                         return true;
-                } else{
-                        return false;
                 }
         }
+        return false;
 
    
 };
