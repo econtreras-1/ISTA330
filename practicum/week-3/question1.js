@@ -10,5 +10,15 @@ is at least twice as much as every other number
 */
 
 var largestNumberIsAtLeastTwice = function(input) {
+
+        var max = Math.max(input);
+
+        for (var i = 1; i < cookies.length; i++){
+                if (max*2 > i){
+                        return true;
+                }
+                return false;
+        }
+
    
 };
