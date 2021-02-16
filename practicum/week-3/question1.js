@@ -16,8 +16,9 @@ var largestNumberIsAtLeastTwice = function(input) {
         for (var i = 1; i < input.length; i++){
                 if (max > input[i]*2){
                         return true;
+                } else{
+                        return false;
                 }
-                return false;
         }
 
    
