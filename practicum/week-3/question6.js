@@ -12,21 +12,15 @@ output: 2
 */
 
 var m_element = function(input){
-    let n = input.length;
-    let i = 1;
-    let count = 1;
 
-    while ( i < n )
-    {
-        while ( i < n & input[i] == input[i-1] )
-        {
-            i = i + 1
-            count = count + 1
-        }
-       if ( count > n/2 )
-            return input[i-1]
-        count = 1
-        i = i + 1
-    }
-    return -1
+    const threshold = Math.floor(input.length / 2);
+    const array = {};
+
+    for (let i = 0; i < input.length; i++) {
+       const value = input[i];
+       array[value] = array[value] + 1 || 1;
+       if (array[value] > threshold)
+          return value
+    };
+    return -1;
 };
