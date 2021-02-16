@@ -11,23 +11,23 @@ input: [1, 2, 2, 3, 2, 7, 2]
 output: 2 
 */
 
-var m_element = function(input) {
-    let m = -1;
-    let i = 0;
+var m_element = function(input){
+    let n = input.length;
+    sort(A, n);
+    let i = 1;
+    let count = 1;
 
-    for (let j = 0; j < input.length; j++)
+    while ( i < n )
     {
-        if (i == 0)
+        while ( i < n & input[i] == input[i-1] )
         {
-            m = [j];
-            i = 1;
+            i = i + 1
+            count = count + 1
         }
-        else if (m == A[j]) {
-            i++;
-        }
-        else {
-            return -1;
-        }
+       if ( count > n/2 )
+            return input[i-1]
+        count = 1
+        i = i + 1
     }
-    return m;
+    return -1
 };
