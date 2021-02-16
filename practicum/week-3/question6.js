@@ -13,7 +13,7 @@ output: 2
 
 var m_element = function(input){
     let n = input.length;
-    input.sort;
+    input.sort(n);
     let i = 1;
     let count = 1;
 
