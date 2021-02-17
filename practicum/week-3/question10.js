@@ -1,7 +1,6 @@
 /*
 Given an array of distinct integers, input, 
-find all pairs of elements with the minimum  difference (that is the minimum of the absolute value of the difference)
- of any two elements. 
+3 
 
 Return a list of pairs in ascending order. 
 For each pair [a, b] we have:
@@ -16,5 +15,17 @@ output: [[-5, -4], [23, 24]]
 */
 
 var minPairs = function(input) {
-
-};
+    input.sort(function(a, b){return a - b});
+    let pairs = []
+    let max = Infinity
+    for (let i = 0; i < input.length; i++){
+        if (Math.abs(input[i + 1] - input[i]) <= max){
+            if (Math.abs(input[i + 1] - input[i]) < max){
+                pairs = []
+                max = Math.abs(input[i + 1] - input[i]);
+            }
+            pairs.push([input[i], input[i+1]]);
+        }
+    }
+    return pairs;
+ };
