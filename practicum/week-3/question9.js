@@ -23,6 +23,6 @@ var largestGroupsCount = function(n) {
     if (count == 9){
         return count;
     } else {
-        return count++;
+        return count+1;
     }
 };
