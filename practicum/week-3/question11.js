@@ -14,5 +14,17 @@ output: 1
 */
 
 var d_count = function(input1, input2, d) {
+    let result = [];
+
+    for (let i = 0; i < input1.length; i++){
+        let elem = Math.abs((input1[i]||0) - (input2||0));
+        result[i]=elem;
+    }
+
+    for (let j = 0; j < result.length; i++){
+        if (result[j] < d){
+            return result.indexOf(result[j]);
+        }
+    }
 
 };
