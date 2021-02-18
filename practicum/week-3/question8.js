@@ -27,6 +27,10 @@ var d_integer = function(input) {
         }
     }
     
-    return Math.max(result);
+    var max = result.reduce(function(a, b) {
+        return Math.max(a, b);
+    });
+
+    return max;
 
 };
