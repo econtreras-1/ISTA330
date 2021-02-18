@@ -13,24 +13,24 @@ output: 3
 */
 
 var d_integer = function(input) {
+    let result = 0;
+    let current = 0;
+    let dint = -1;
 
-    var counts = {};
-    input.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
-    
-    let result = [];
+    for(let i=0; i < input.length; i++){
+        current = input[i];
+        let count = 0;
 
-    for (var key in counts){
-        var value = counts[key];
+        for(let j=0; j < input.length; j++){
+            if(current == input[j]){
+                count++;
+            }
+        }
 
-        if(key == value){
-            result.push(key);
+        if(count == current && count > highest){
+            dint = count;
+            highest = count;
         }
     }
-    
-    var max = result.reduce(function(a, b) {
-        return Math.max(a, b);
-    });
-
-    return max;
-
+    return dint;
 };
