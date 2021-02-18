@@ -14,4 +14,19 @@ output: 3
 
 var d_integer = function(input) {
 
+    var counts = {};
+    input.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
+    
+    let result = [];
+
+    for (var key in counts){
+        var value = counts[key];
+
+        if(key == value){
+            result.push(key);
+        }
+    }
+    
+    return Math.max(result);
+
 };
