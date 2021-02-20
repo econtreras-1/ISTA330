@@ -27,9 +27,9 @@ var d_integer = function(input) {
             }
         }
 
-        if(count == current && count > highest){
+        if(count == current && count > result){
             dint = count;
-            highest = count;
+            result = count;
         }
     }
     return dint;
