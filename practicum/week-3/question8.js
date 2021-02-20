@@ -11,6 +11,7 @@ Example:
 input: [3,5,3,3,5,1]
 output: 3
 */
+//Update
 
 var d_integer = function(input) {
     let result = 0;
