@@ -55,16 +55,16 @@
        function insertTable(){
            var table = '';
            table += '<table>';
-           table += '<tr>'
+           table += '<tr>';
            for (let i=0;i<5; i++){
                table += '<td>' + '<img src="images/' + flowers[i].picture + '">' + '<br>' + flowers[i].name + '</td>';
            }
-           table += '</tr>'
-           table += '<tr>'
+           table += '</tr>';
+           table += '<tr>';
            for (let j=5;j<9; j++){
                table += '<td>' + '<img src="images/' + flowers[j].picture + '">' + '<br>' + flowers[j].name + '</td>';
            }
-           table += '</tr>'
+           table += '</tr>';
 
            document.getElementById('flowersDiv').innerHTML = table;
 
