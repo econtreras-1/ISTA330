@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload=insertTable()>
+<body>
     <div id="question">
         Using the array flowers below, 
         display the flowers. Use the div 'flowersDiv'.
@@ -58,13 +58,13 @@
            table += '<tr>';
            for (let i=0;i<5; i++){
                table += '<td>' + '<img src="images/' + flowers[i].picture + '">' + '<br>' + flowers[i].name + '</td>';
-           }
+           };
            table += '</tr>';
            table += '<tr>';
            for (let j=5;j<9; j++){
                table += '<td>' + '<img src="images/' + flowers[j].picture + '">' + '<br>' + flowers[j].name + '</td>';
-           }
-           table += '</tr>';
+           };
+           table += '</tr>'
 
            document.getElementById('flowersDiv').innerHTML = table;
 
