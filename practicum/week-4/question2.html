@@ -122,12 +122,12 @@
        }
     </script>
     <script>
-        function sortFunction(flower) {
+        function sortFunction(flower){
             //High Order Function for Comparing on Sort.
-            sorted = flowers.sort(compare);
+            flowersSorted = flowers.sort(compare);
             var count = 0;
-            for (i=0; i<sorted.length; i++) {
-                if (flower == sorted[i].name) {
+            for (i=0; i<flowersSorted.length; i++) {
+                if (flower == flowersSorted[i].name) {
                     count=i;
                 }
             }
@@ -135,7 +135,7 @@
             var table = ''
            table += "<table>";
             var n = 0;
-            for (i = 0; i < sorted.length; i++) {
+            for (i=0; i<flowersSorted.length; i++) {
                if (n == 4) {
                    table += "</tr>"
                    n = 0;
@@ -143,11 +143,11 @@
                else if (n == 0) {
                    table += "<tr>"
                }
-               var flower = sorted[i]
-               table += "<td>" + '<img src="images/' + sorted[count].picture + '" id="' + sorted[count].name + '" onclick="sortFunction(' + "this.id" +')">' + "<br>" + sorted[count].name + "</td>";
+               var flower = flowersSorted[i]
+               table += "<td>" + '<img src="images/' + flowersSorted[count].picture + '" id="' + flowersSorted[count].name + '" onclick="sortFunction(' + "this.id" +')">' + "<br>" + flowersSorted[count].name + "</td>";
                
                n += 1;
-               if (count == (sorted.length - 1)) {
+               if (count == (flowersSorted.length - 1)) {
                    count = 0;
                }
                else {
@@ -165,7 +165,7 @@
             return 1;
         }
         return 0;
-};
+    };
     </script>
 </body>
 
