@@ -53,9 +53,9 @@
        ];
 
        function insertTable(){
-           var table = '';
+           var table = ''
            table += '<table>';
-           var count = 0;
+            var count = 0;
            for (let i=0;i<flowers.length; i++){
                if (count == 4) {
                    table += '</tr>'
@@ -64,7 +64,7 @@
                else if (count == 0){
                    table += '<tr>'
                }
-               table += '<td>' + '<img src="images/' + flowers[j].picture + '">' + '<br>' + flowers[j].name + '</td>';
+               table += "<td>" + '<img src="images/' + flowers[i].picture + '">' + "<br>" + flowers[i].name + "</td>";
                count += 1
            };
            
