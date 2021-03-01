@@ -57,10 +57,12 @@
            table += '<table>';
             var count = 0;
            for (let i=0;i<flowers.length; i++){
+               //Start New Row at 4th Flower Image
                if (count == 4) {
                    table += '</tr>'
                    count = 0;
                }
+               //Start Row at 1st Flower Image
                else if (count == 0){
                    table += '<tr>'
                }
